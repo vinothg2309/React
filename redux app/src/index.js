@@ -1,22 +1,14 @@
-import { createStore } from 'redux'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import {Provider} from 'react-redux'
+import {store} from './store/store'
+import App from './App'
 
-/* Order - create --> Dispatch --> reducer --> subscribe */
-const reducer=function(state,action){
-    if(action.type === 'INC'){
-        return state+action.payload
-    }
-    if(action.type === 'DEC'){
-        return state-action.payload
-    }
-    return state;
-}
+const app = document.getElementById('root')
 
-const store = createStore(reducer, 1)
-
-store.subscribe(() =>{
-    console.log('Store Changed: '+ store.getState())
-})
-
-store.dispatch({type:'INC', payload:10})
-store.dispatch({type:'DEC', payload:5})
-store.dispatch({type:'MUL', payload:5})
+ReactDOM.render(
+	<Provider store={store}>
+  		<App/>
+	</Provider>
+	, app);
