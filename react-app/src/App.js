@@ -10,20 +10,23 @@ import Button from './components/hooks/Hook2';
 import CompLifecycle from './components/CompLifecycle';
 import DataLoader from './components/hooks/DataLoader';
 import Hook3 from './components/hooks/Hook3';
+import Demo from './components/hooks/Reducer';
+import { HoverComponent } from './components/hoc/HoverCounter';
 
 function App() {
   return (
     <div>
         <h1 className="bg-warning text-center">Welcome to React App !!!</h1>
         <Header company="Wells Fargo pvt. Ltd"></Header>
-        
+      {/*   <Demo></Demo> */}
+        <HoverComponent></HoverComponent>
         {/* <TextInput></TextInput>
         //<StatefulApp></StatefulApp><ChildParentInvokation></ChildParentInvokation> */}
        {/*  <RefsDemo></RefsDemo>
         <Button></Button> */}
         {/* <CompLifecycle></CompLifecycle> */}
         {/* <DataLoader></DataLoader> */}
-        <Hook3></Hook3>
+        {/* <Hook3></Hook3> */}
         <Footer></Footer>
     </div>
   );
